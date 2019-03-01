@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+	<style>
+		.bgimg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+		#admin {
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			background: rgba(200, 200, 200, 0.5);
+			border-radius: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -295px;
+			margin-left: -250px;
+		}
+		#main {
+			width: 460px;
+			height: 400px;
+			background: rgba(255, 255, 255, 0.6);
+			border-radius: 20px;
+			margin-left: 20px;
+			
+		}
+		.inputtext{
+			display: inline-block;
+			width: 420px;
+			height: 25px;
+		}
+		.inputs:focus{
+			outline: none;
+			border: 2px solid #9ecaed;
+			box-shadow: 0 0 10px #9ecaed;
+		}
+		.title{
+			display: inline-block;
+			height: 40px;
+			line-height: 40px;
+		}
+		.row {
+			
+			margin-left: 20px;
+		}
+		h3{
+			padding-left: 40px;
+		}
+		input[type="submit"]{
+			margin-top: 10px; 
+			width: 90px;
+			height: 40px;
+			border-radius: 10px;
+			background-color: #fff;
+			font-size: 20px;
+			color: #000;
+			font-weight: none;
+		}
+		input[type="submit"]:hover {
+			cursor: pointer;
+			background-color: #374760;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<img src="../img/bg1.jpg" class="bgimg"/>
+	<div id="admin" >
+		<h3>注册</h3>
+		<div id="main">
+			<form action="../php/register.php" method="post" >
+				<div class="row"><label><span class="title" >登陆账号：</span><input type="text" class="inputtext" name="userId" /></label></div>
+				<div class="row"><label><span class="title" >密码：</span><input type="password" class="inputtext" name="pwd" /></label></div>
+				<div class="row"><label><span class="title" >确认密码：</span><input type="password" class="inputtext" name="check_pwd" /></label></div>
+				<div class="row"><label><span class="title" >昵称：</span><input type="text" class="inputtext" name="name" /></label></div>
+				<div class="row"><span></span><input type="submit" value="注册" /><a href="login.html" >返回登陆</a></div>
+			</form>
+		</div>
+	</div>
+	
